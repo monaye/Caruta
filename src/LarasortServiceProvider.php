@@ -1,8 +1,8 @@
-<?php namespace Sukohi\Caruta;
+<?php namespace Monaye\Larasort;
 
 use Illuminate\Support\ServiceProvider;
 
-class CarutaServiceProvider extends ServiceProvider {
+class LarasortServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -28,9 +28,9 @@ class CarutaServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['caruta'] = $this->app->share(function($app)
+		$this->app['larasort'] = $this->app->share(function($app)
 		{
-			return new Caruta;
+			return new Larasort;
 		});
 	}
 
@@ -41,7 +41,7 @@ class CarutaServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return ['caruta'];
+		return ['larasort'];
 	}
 
 }

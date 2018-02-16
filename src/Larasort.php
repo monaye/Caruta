@@ -1,8 +1,8 @@
-<?php namespace Sukohi\Caruta;
+<?php namespace Monaye\Larasort;
 
 use Illuminate\Support\Facades\Request;
 
-class Caruta {
+class Larasort {
 
 	const ORDER_KEY = 'orderby';
 	const DIRECTION_KEY = 'direction';

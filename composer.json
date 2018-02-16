@@ -1,10 +1,10 @@
 {
-    "name": "sukohi/caruta",
+    "name": "monaye/larasort",
     "description": "A PHP package mainly developed for Laravel to generate sort link(s).",
     "authors": [
         {
-            "name": "Sukohi",
-            "email": "capilano.sukohi@gmail.com"
+            "name": "Monaye Win",
+            "email": "winmonaye@gmail.com"
         }
     ],
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sukohi\\Caruta\\": "src/"
+            "Sukohi\\Larasort\\": "src/"
         }
     },
     "minimum-stability": "stable"

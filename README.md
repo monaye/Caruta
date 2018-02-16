@@ -1,8 +1,8 @@
-Caruta
+Larasort
 =====
 
 A PHP package mainly developed for Laravel to generate sort link(s).  
-(This is for Laravel 5+. [For Laravel 4.2](https://github.com/SUKOHI/Caruta/tree/1.0))
+(This is for Laravel 5+. [For Laravel 4.2](https://github.com/SUKOHI/Larasort/tree/1.0))
 
 ![alt text](http://i.imgur.com/qT8TjJn.png)
 ![alt text](http://i.imgur.com/5RerRSA.png)  
@@ -13,7 +13,7 @@ Installation
 Add this package name in composer.json
 
     "require": {
-      "sukohi/caruta": "2.*"
+      "sukohi/larasort": "2.*"
     }
 
 Execute composer command.
@@ -24,28 +24,28 @@ Register the service provider in app.php
 
     'providers' => [
         ...Others...,  
-        Sukohi\Caruta\CarutaServiceProvider::class,
+        Sukohi\Larasort\LarasortServiceProvider::class,
     ]
 
 Also alias
 
     'aliases' => [
         ...Others...,  
-        'Caruta'   => Sukohi\Caruta\Facades\Caruta::class
+        'Larasort'   => Sukohi\Larasort\Facades\Larasort::class
     ]
 
 Usage
 ====
 **Minimal way**  
     
-    {{ \Caruta::links('your-column-name') }}
+    {{ \Larasort::links('your-column-name') }}
     
 (example)  
 ![alt text](http://i.imgur.com/qT8TjJn.png)  
 
 **with Options**
 
-    echo \Caruta::url('http://example.com')  
+    echo \Larasort::url('http://example.com')  
         ->text('&#8593;', '&#8595;')  
         ->appends([
 			'key1' => 'value1',  
@@ -61,7 +61,7 @@ Usage
 
 If you set the third argument like the below, only one link will be displayed.  
 
-    \Caruta::text(
+    \Larasort::text(
         '<i class="fa fa-sort-asc"></i>',  
         '<i class="fa fa-sort-desc"></i>',  
         '<i class="fa fa-sort"></i>'
@@ -75,7 +75,7 @@ If you set the third argument like the below, only one link will be displayed.
 With model(Eloquent), you can automatically set "ORDER BY" like the below.
 
 	$items = \App\Item::select('id', 'title');
-	$items = \Caruta::sort($items, 
+	$items = \Larasort::sort($items, 
 	    ['id', 'title', 'created_at'], 
 	    ['updated_at', 'asc']
 	);

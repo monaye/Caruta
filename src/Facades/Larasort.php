@@ -1,12 +1,12 @@
-<?php namespace Sukohi\Caruta\Facades;
+<?php namespace Monaye\Larasort\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Caruta extends Facade {
+class Larasort extends Facade {
 
 	protected static function getFacadeAccessor() {
 
-		return 'caruta';
+		return 'larasort';
 
 	}
 
