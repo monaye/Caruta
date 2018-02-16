@@ -2,7 +2,6 @@ Larasort
 =====
 
 A PHP package mainly developed for Laravel to generate sort link(s).  
-(This is for Laravel 5+. [For Laravel 4.2](https://github.com/SUKOHI/Larasort/tree/1.0))
 
 ![alt text](http://i.imgur.com/qT8TjJn.png)
 ![alt text](http://i.imgur.com/5RerRSA.png)  
@@ -13,7 +12,7 @@ Installation
 Add this package name in composer.json
 
     "require": {
-      "sukohi/larasort": "2.*"
+      "monaye/larasort": "2.*"
     }
 
 Execute composer command.
@@ -24,14 +23,14 @@ Register the service provider in app.php
 
     'providers' => [
         ...Others...,  
-        Sukohi\Larasort\LarasortServiceProvider::class,
+        Monaye\Larasort\LarasortServiceProvider::class,
     ]
 
 Also alias
 
     'aliases' => [
         ...Others...,  
-        'Larasort'   => Sukohi\Larasort\Facades\Larasort::class
+        'Larasort'   => Monaye\Larasort\Facades\Larasort::class
     ]
 
 Usage
@@ -109,4 +108,4 @@ License
 ====
 This package is licensed under the MIT License.
 
-Copyright 2014 Sukohi Kuhoh
+Copyright 2014 Monaye Kuhoh
