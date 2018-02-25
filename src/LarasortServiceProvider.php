@@ -28,8 +28,7 @@ class LarasortServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['larasort'] = $this->app->share(function($app)
-		{
+		$this->app = $this->app->singleton('caruta', function($app){
 			return new Larasort;
 		});
 	}
