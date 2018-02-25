@@ -1,8 +1,11 @@
-<?php namespace Monaye\Larasort;
+<?php 
+
+namespace Monaye\Larasort;
 
 use Illuminate\Support\Facades\Request;
 
-class Larasort {
+class Larasort 
+{
 
 	const ORDER_KEY = 'orderby';
 	const DIRECTION_KEY = 'direction';

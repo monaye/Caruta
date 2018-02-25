@@ -1,8 +1,11 @@
-<?php namespace Monaye\Larasort;
+<?php 
+
+namespace Monaye\Larasort;
 
 use Illuminate\Support\ServiceProvider;
 
-class LarasortServiceProvider extends ServiceProvider {
+class LarasortServiceProvider extends ServiceProvider 
+{
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -28,7 +31,7 @@ class LarasortServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app = $this->app->singleton('caruta', function($app){
+		$this->app->singleton('larasort', function($app){
 			return new Larasort;
 		});
 	}
